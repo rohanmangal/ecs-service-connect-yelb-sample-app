@@ -594,7 +594,7 @@ Resources:
       ExecutionRoleArn: !Ref "YelbECSTaskExecutionRole"
       ContainerDefinitions:
         - Name: yelb-db
-          Image: public.ecr.aws/j7e2a1k3/yelb-sc-db:0.5
+          Image: public.ecr.aws/rohanmangal/yelb-db
           Cpu: 100
           Essential: true
           PortMappings:
@@ -645,7 +645,7 @@ Resources:
       ExecutionRoleArn: !Ref "YelbECSTaskExecutionRole"
       ContainerDefinitions:
         - Name: redis-server
-          Image: public.ecr.aws/j7e2a1k3/redis-sc:4.0.2
+          Image: public.ecr.aws/docker/library/redis
           Cpu: 100
           Essential: true
           PortMappings:
@@ -702,7 +702,7 @@ Resources:
       ExecutionRoleArn: !Ref "YelbECSTaskExecutionRole"
       ContainerDefinitions:
         - Name: yelb-appserver
-          Image: public.ecr.aws/j7e2a1k3/yelb-sc-appserver:latest
+          Image: public.ecr.aws/rohanmangal/yelb-appserver
           Cpu: 100
           Essential: true
           PortMappings:
@@ -773,7 +773,7 @@ Resources:
       ExecutionRoleArn: !Ref "YelbECSTaskExecutionRole"
       ContainerDefinitions:
         - Name: yelb-ui
-          Image: public.ecr.aws/j7e2a1k3/yelb-sc-ui:latest
+          Image: public.ecr.aws/rohanmangal/yelb-ui
           Cpu: 100
           Essential: true
           PortMappings:
